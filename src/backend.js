@@ -8,9 +8,16 @@ app.use(express.json());
 
 // በምስል fe31e477 መሠረት የተስተካከለ የግንኙነት መረጃ
 const config = {
-    connectionString: 'Driver={SQL Server};Server=HI;Database=MTU_Clearance;Trusted_Connection=yes;Encrypt=yes;TrustServerCertificate=yes;'
+    // ሰርቨርህ 'HI' መሆኑን በምስል fe31e477 አይተናል
+    server: 'localhost', 
+    database: 'MTU_Clearance',
+    options: {
+        encrypt: true, 
+        trustServerCertificate: true
+    },
+    // ይህ መስመር ስህተቱን ይፈታዋል
+    driver: 'msnodesqlv8' 
 };
-
 app.get('/status/:id', async (req, res) => {
     try {
         const studentID = req.params.id;
@@ -32,4 +39,4 @@ app.get('/status/:id', async (req, res) => {
     }
 });
 
-app.listen(3000, () => console.log("ሰርቨሩ በ 3000 ላይ ስራ ጀምሯል! - backend.js:35"));
+app.listen(3000, () => console.log("ሰርቨሩ በ 3000 ላይ ስራ ጀምሯል! - backend.js:42"));

@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "cors": "^2.8.6",
     "express": "^5.2.1",
+    "flask-cors": "^0.0.1",
     "msnodesqlv8": "^5.1.5",
     "mssql": "^12.2.0",
     "react": "^19.2.4",
